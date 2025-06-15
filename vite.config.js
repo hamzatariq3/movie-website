@@ -1,8 +1,7 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
-// https://vitejs.dev/config/
 export default defineConfig({
+  base: './', // <-- This line is critical for Netlify to render your React app properly
   plugins: [react()],
-  base: './', // ✅ This is the key fix for Netlify blank screen
 })
